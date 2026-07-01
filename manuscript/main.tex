@@ -104,21 +104,35 @@ All analyses were conducted in R (version 4.5.2) using the \texttt{meta} and \te
 
 \subsection{Study Characteristics and Main Analysis}
 
-The systematic search yielded [N] records, of which 21 studies met inclusion criteria, encompassing approximately 29.8 million participants. Study characteristics are summarized in Table 1.
+The systematic search identified 2,192 records, of which 1,615 were screened after deduplication, 590 underwent full-text review, and 21 studies met inclusion criteria for quantitative synthesis (PRISMA flowchart, Supplementary Figure S1). Study characteristics are summarized in Table 1. The 21 included studies encompassed approximately 29.8 million participants from 5 countries (predominantly South Korea, n=14), published between 2019 and 2025. Study designs included population-based nationwide cohorts (n=8) and hospital- or clinic-based cohorts (n=13). MASLD was defined using NAFLD (n=8), MAFLD (n=7), or MASLD (n=6) criteria, with FLI-based ultrasonography as the most common diagnostic method. Median follow-up ranged from 3.2 to 15.8 years. Two studies adjusted for atrial fibrillation (AF); seven studies assessed hepatic fibrosis (Supplementary Table S2).
 
-Across 21 studies, MASLD was associated with a 37\% increased risk of stroke (HR 1.37, 95\% CI 1.28--1.46, I\textsuperscript{2}=98.6\%; Figure 2). Sensitivity analyses excluding potentially overlapping NHIS cohorts yielded directionally consistent results (HR 1.34 vs 1.33).
+Across 21 studies, MASLD was associated with a 37\% increased risk of stroke (random-effects HR 1.37, 95\% CI 1.28--1.46, p$<$0.001; common-effect HR 1.32, 95\% CI 1.31--1.33; Figure 2). Individual study hazard ratios ranged from 1.10 (Jang 2026) to 2.01 (Kim 2020), all exceeding 1.0. Substantial between-study heterogeneity was observed (I\textsuperscript{2}=98.6\%, $\tau^2$=0.022, Cochran's Q=1403.9, df=20, p$<$0.001).
+
+\subsection{Subgroup Analyses}
+
+Subgroup analyses by stroke subtype showed comparable risk estimates for total stroke (k=13, HR 1.34, 95\% CI 1.26--1.43) and ischemic stroke (k=8, HR 1.40, 95\% CI 1.21--1.60), with no significant between-group difference (p=0.62; Supplementary Figure S2).
+
+By liver disease definition, pooled estimates were lower for MASLD-defined studies (k=6, HR 1.20, 95\% CI 1.12--1.29) than for NAFLD-defined (k=8, HR 1.42, 95\% CI 1.23--1.63) or MAFLD-defined studies (k=7, HR 1.41, 95\% CI 1.34--1.48; p-between=0.002; Supplementary Figure S7).
+
+By AF adjustment status, studies without AF adjustment (k=19) yielded a pooled HR of 1.40 (95\% CI 1.30--1.50), whereas the two studies adjusting for AF yielded a substantially lower pooled estimate (k=2, HR 1.11, 95\% CI 1.07--1.16; p-between$<$0.001; Supplementary Figure S8). However, this subgroup comparison is limited by the small number of AF-adjusted studies.
+
+By setting, population-based studies (k=8, HR 1.42, 95\% CI 1.23--1.64) and hospital/clinic-based studies (k=13, HR 1.33, 95\% CI 1.26--1.40) yielded comparable estimates (p-between=0.40; Supplementary Figure S10).
+
+\subsection{Meta-Regression}
+
+Of seven study-level covariates evaluated, only AF adjustment was a statistically significant moderator of between-study heterogeneity in meta-regression (R\textsuperscript{2}=16.4\%, p=0.040; $\beta = -0.214$; Figure 6A). MASLD definition criteria showed a numerically large but non-significant contribution (R\textsuperscript{2}=13.8\%, p=0.139). The remaining covariates — diagnosis method (R\textsuperscript{2}=0.0\%, p=0.68), country (R\textsuperscript{2}=0.0\%, p=0.92), follow-up duration (R\textsuperscript{2}=0.0\%, p=0.91), sample size (R\textsuperscript{2}=1.8\%, p=0.28), and mean age (R\textsuperscript{2}=6.9\%, p=0.25) — did not explain significant proportions of between-study variance (Supplementary Figures S4--S6).
 
 \subsection{AF-Associated Pathway}
 
 Evidence for an AF-associated pathway was evaluated using a five-level hierarchy (Supplementary Table S1).
 
-\textit{Meta-regression (Level I).} Meta-regression identified AF adjustment as a significant contributor to between-study heterogeneity (R\textsuperscript{2}=16.4\%, p=0.040; $\beta = -0.214$; Figure 6A). Studies adjusting for AF generally reported lower effect estimates than those without AF adjustment: the predicted stroke risk was HR 1.40 (95\% CI 1.31--1.49) without AF adjustment versus HR 1.13 (95\% CI 0.93--1.37) with AF adjustment, corresponding to 67.7\% attenuation of the excess risk.
+\textit{Meta-regression (Level I).} Meta-regression identified AF adjustment as a significant contributor to between-study heterogeneity (R\textsuperscript{2}=16.4\%, p=0.040; $\beta = -0.214$; Figure 6A). The predicted stroke risk, estimated from the regression model, was HR 1.40 (95\% CI 1.31--1.49) without AF adjustment compared to HR 1.13 (95\% CI 0.93--1.37) with AF adjustment, corresponding to 67.7\% attenuation of the excess risk attributable to AF adjustment.
 
-\textit{Interaction by baseline AF (Level II).} In the only study reporting AF-stratified estimates, the association between MASLD and stroke remained significant among individuals without AF (HR 1.10, 95\% CI 1.08--1.11) but was attenuated among those with pre-existing AF (HR 1.03, 95\% CI 0.95--1.12; Figure 6B). Within-study AF covariate adjustment yielded consistent directional attenuation (HR 1.14 $\rightarrow$ 1.10; 28.6\% attenuation).
+\textit{Interaction by baseline AF (Level II).} In the only study reporting AF-stratified individual-level estimates (Jang 2026), the association between MASLD and stroke remained significant among individuals without AF (HR 1.10, 95\% CI 1.08--1.11) but was attenuated among those with pre-existing AF (HR 1.03, 95\% CI 0.95--1.12; Figure 6B), consistent with effect modification by baseline AF status. Within-study AF covariate adjustment yielded consistent directional attenuation (HR 1.14 $\rightarrow$ 1.10; 28.6\% attenuation).
 
 \textit{Supporting pathway evidence (Level S1).} Ohno et al. (2023) demonstrated that MASLD was associated with a 51\% increased risk of incident AF (HR 1.51, 95\% CI 1.46--1.57; n=8.2 million), establishing the MASLD--AF link in the proposed pathway.
 
-\textit{Additional evidence.} Lee et al. (2021) reported attenuation after bundle adjustment for cardiovascular comorbidities including AF (HR 1.55 $\rightarrow$ 1.43; 21.8\%), though the AF-specific contribution could not be isolated. Subgroup analyses yielded directionally consistent findings, although the number of studies in the AF-adjusted subgroup was limited (k=2).
+\textit{Additional evidence.} Lee et al. (2021) reported attenuation after bundle adjustment for cardiovascular comorbidities including AF (HR 1.55 $\rightarrow$ 1.43; 21.8\%), though the AF-specific contribution could not be isolated.
 
 \subsection{Fibrosis-Related Pathway}
 
@@ -126,7 +140,13 @@ Four studies reported fibrosis-stratified stroke risk estimates using different 
 
 Longitudinal fibrosis dynamics from Park et al. (2022) provided complementary evidence: fibrosis regression was associated with substantially reduced stroke risk (HR 0.58) compared to persistent fibrosis (HR 1.31; Figure 7B).
 
-Although subgroup differences according to fibrosis assessment did not reach conventional statistical significance (p=0.078), studies evaluating more advanced fibrosis phenotypes tended to report higher risk estimates (Supplementary Figure S9). Exploratory pooled estimates by fibrosis severity category are presented in Supplementary Material only, as fibrosis assessment tools were not harmonized across studies.
+Although subgroup differences according to fibrosis assessment did not reach conventional statistical significance (p=0.078), studies evaluating more advanced fibrosis phenotypes tended to report higher risk estimates (Assessed: k=7, HR 1.26, 95\% CI 1.15--1.39; Not Assessed: k=14, HR 1.42, 95\% CI 1.30--1.55; Supplementary Figure S9). Exploratory pooled estimates by fibrosis severity category are presented in Supplementary Material only, as fibrosis assessment tools were not harmonized across studies.
+
+\subsection{Sensitivity Analyses and Publication Bias}
+
+The association remained robust across sensitivity analyses. Excluding Kim 2020 — the study with the largest effect estimate — yielded a pooled HR of 1.34 (95\% CI 1.26--1.41; k=20). Excluding Lee 2025 and Kim 2024, which shared NHIS source populations, yielded HR 1.37 (95\% CI 1.27--1.47; k=19). Leave-one-out analysis confirmed that no single study drove the overall estimate.
+
+Publication bias assessment was inconclusive. Egger's test was non-significant in the full sample (p=0.64) but became significant after excluding the largest study (Egger p=0.018 without Lee 2025). Begg's rank correlation test was non-significant (p=1.00). Funnel plot asymmetry emerged after removal of Lee 2025, warranting cautious interpretation (Supplementary Figure S3).
 
 % ============================================================
 %  DISCUSSION
