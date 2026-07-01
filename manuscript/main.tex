@@ -83,19 +83,43 @@ However, existing primary studies vary substantially in their adjustment for AF 
 
 \subsection{Search Strategy and Selection Criteria}
 
-[Search strategy to be detailed.]
+A systematic review and meta-analysis was conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) guidelines. Electronic searches were performed in PubMed, Embase, Web of Science, and the Cochrane Library from database inception to [search date].
+
+Search terms combined controlled vocabulary and free-text keywords related to metabolic dysfunction--associated steatotic liver disease and cerebrovascular outcomes, including ``MASLD'', ``MAFLD'', ``NAFLD'', ``fatty liver'', ``hepatic steatosis'', ``stroke'', ``cerebrovascular disease'', ``ischemic stroke'', and ``hemorrhagic stroke''. The detailed search strategy for each database is provided in Supplementary Material.
+
+Studies were eligible if they: (1) included adult participants; (2) evaluated MASLD, MAFLD, or NAFLD as the exposure; (3) reported incident stroke or cerebrovascular events as outcomes; (4) provided hazard ratios (HRs), relative risks (RRs), or odds ratios (ORs) with corresponding 95\% confidence intervals (CIs), or sufficient data for calculation; and (5) used a cohort, case-control, or longitudinal observational design.
+
+Studies were excluded if they: (1) lacked stroke-related outcomes; (2) did not provide effect estimates; (3) involved pediatric populations; (4) were reviews, editorials, conference abstracts, case reports, or animal studies; or (5) contained overlapping populations. When overlapping cohorts were identified, the largest or most comprehensive dataset was retained for quantitative synthesis. Specifically, Park et al. (2022) and Jang et al. (2026) originated from partially overlapping Korean National Health Insurance Service populations; therefore, only Jang et al. (2026) was included in the primary meta-analysis, whereas Park et al. (2022) was retained for descriptive evaluation of fibrosis dynamics.
+
+Two investigators independently screened titles, abstracts, and full texts. Disagreements were resolved through discussion and consensus.
 
 \subsection{Data Extraction and Quality Assessment}
 
-[Data extraction procedures to be detailed.]
+Two investigators independently extracted study-level data using a standardized data collection form. Extracted variables included first author, publication year, country, study design, population characteristics, sample size, follow-up duration, MASLD/MAFLD/NAFLD definition, fibrosis assessment method, stroke outcome definition, covariate adjustment strategy, and reported effect estimates.
+
+When multiple models were reported, the most fully adjusted estimate was preferentially extracted for quantitative synthesis. Hazard ratios (HRs) and corresponding 95\% confidence intervals (CIs) were used as the primary effect measures. Relative risks and odds ratios were considered equivalent to HRs because stroke incidence was generally low in the included populations.
+
+Study quality was assessed using the Newcastle--Ottawa Scale (NOS) for cohort studies. The NOS evaluates three domains: participant selection, comparability of study groups, and outcome assessment. Studies scoring 7--9 points were considered high quality, 5--6 points moderate quality, and $<$5 points low quality.
+
+Risk-of-bias assessments were independently performed by two investigators, with disagreements resolved by consensus. Overall certainty of evidence was further evaluated using the Grading of Recommendations Assessment, Development and Evaluation (GRADE) framework.
 
 \subsection{Statistical Analysis}
 
-The primary analysis used random-effects meta-analysis with restricted maximum-likelihood (REML) estimation to pool study-level hazard ratios. Heterogeneity was quantified using I\textsuperscript{2} and Cochran's Q. Meta-regression was performed to evaluate whether AF adjustment moderated the MASLD--stroke association. Subgroup analyses were conducted by fibrosis assessment status, AF adjustment, liver disease definition, and other study-level characteristics.
+The primary analysis used random-effects meta-analysis with restricted maximum-likelihood (REML) estimation to pool study-level hazard ratios, chosen to account for both within-study and between-study variability in observational data. The Hartung--Knapp adjustment was applied for the primary pooled estimate to yield more conservative confidence intervals. Heterogeneity was quantified using I\textsuperscript{2} and Cochran's Q, with I\textsuperscript{2} values of 25\%, 50\%, and 75\% interpreted as low, moderate, and high heterogeneity, respectively. The between-study variance component ($\tau^2$) was estimated using REML.
 
-\textit{NHIS overlap handling.} Park et al. (2022) and Jang et al. (2026) originated from partially overlapping Korean National Health Insurance Service (NHIS) populations. To avoid double-counting, only Jang et al. (2026) was included in quantitative synthesis, whereas Park et al. (2022) was retained for descriptive evaluation of fibrosis dynamics.
+\textit{Subgroup analyses.} Pre-specified subgroup analyses were performed to explore sources of heterogeneity. Studies were stratified by: (1) stroke outcome subtype (total stroke vs. ischemic stroke); (2) MASLD definition criteria (NAFLD, MAFLD, or MASLD); (3) AF adjustment status (adjusted vs. not adjusted); (4) fibrosis assessment status (assessed vs. not assessed); and (5) study setting (population-based vs. hospital/clinic-based). Subgroup differences were tested using a random-effects test for between-group heterogeneity, with a separate $\tau^2$ estimated for each subgroup.
 
-All analyses were conducted in R (version 4.5.2) using the \texttt{meta} and \texttt{metafor} packages. Statistical significance was set at $\alpha = 0.05$ (two-sided).
+\textit{Meta-regression.} Univariate random-effects meta-regression was performed to evaluate study-level covariates as moderators of the MASLD--stroke association. Covariates tested included: AF adjustment (binary), MASLD definition criteria (categorical), diagnosis method (categorical), country (categorical), follow-up duration (continuous), log-transformed sample size (continuous), and mean age (continuous). The proportion of between-study variance explained by each moderator was expressed as R\textsuperscript{2}, and statistical significance of moderators was assessed using the omnibus QM test.
+
+\textit{AF-associated pathway analysis.} Evidence for an AF-associated pathway was evaluated using a five-level hierarchy: Level I — between-study meta-regression (AF adjustment as moderator); Level II — patient-level interaction by baseline AF status (Jang 2026); Level III — within-study AF covariate adjustment; Level IV — bundle adjustment for cardiovascular comorbidities including AF (Lee 2021); and Level S1 — supporting pathway evidence linking MASLD to incident AF (Ohno 2023). Attenuation of the excess risk attributable to AF was calculated as (HR\textsubscript{without AF} $-$ HR\textsubscript{with AF}) / (HR\textsubscript{without AF} $-$ 1) $\times$ 100\%.
+
+\textit{Fibrosis-related pathway analysis.} Fibrosis-stratified stroke risk estimates were extracted from studies reporting fibrosis severity categories using histology or non-invasive scores (NFS, BARD, AAR). Given heterogeneity in fibrosis measurement methods, formal pooling across tools was not performed; individual-study estimates were presented descriptively. Fibrosis dynamics were evaluated using longitudinal data from Park et al. (2022), comparing stroke risk in participants with fibrosis regression versus persistent fibrosis.
+
+\textit{Sensitivity analyses.} Robustness of the primary finding was assessed through: (1) leave-one-out analysis, iteratively omitting each study to evaluate its influence on the pooled estimate; (2) exclusion of Kim et al. (2020), the study with the largest effect estimate; (3) exclusion of Lee et al. (2025) and Kim et al. (2024), which shared NHIS source populations with other included studies; and (4) exclusion of all three studies simultaneously as the most conservative estimate. Baujat plots were generated to quantify each study's contribution to overall heterogeneity and influence on the pooled result.
+
+\textit{Publication bias.} Publication bias was assessed using: (1) funnel plot symmetry with pseudo 95\% confidence limits; (2) Egger's linear regression test for funnel plot asymmetry; (3) Begg's rank correlation test; and (4) trim-and-fill analysis to estimate the number of potentially missing studies and the adjusted pooled estimate. Given the known sensitivity of publication-bias tests to a single influential study, Egger's test was repeated after exclusion of the largest study (Lee et al. 2025).
+
+All analyses were conducted in R (version 4.5.2) using the \texttt{meta} package (version 8.5-0) for meta-analysis and subgroup analyses, and the \texttt{metafor} package (version 5.0-1) for meta-regression and sensitivity analyses. Statistical significance was set at $\alpha = 0.05$ (two-sided), with p-values between 0.05 and 0.10 considered borderline.
 
 % ============================================================
 %  RESULTS
