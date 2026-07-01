@@ -1,0 +1,170 @@
+% ============================================================
+%  MASLD & Stroke Risk — Meta-Analysis Manuscript
+%  Title: Metabolic dysfunction–associated steatotic liver disease
+%         and stroke risk: A systematic review and meta-analysis
+%         exploring AF-associated and fibrosis-related pathways
+% ============================================================
+\documentclass[12pt,a4paper]{article}
+
+% ---- Packages ----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\doublespacing
+\usepackage{lineno}
+\linenumbers
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{xcolor}
+% \usepackage{multirow}      % Not in BasicTeX — install if needed
+% \usepackage{enumitem}     % Not in BasicTeX — install if needed
+
+% ---- Metadata ----
+\title{\textbf{Metabolic dysfunction--associated steatotic liver disease and stroke risk:\\
+A systematic review and meta-analysis exploring AF-associated and fibrosis-related pathways}}
+
+\author{
+  % Authors to be filled
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+%  ABSTRACT
+% ============================================================
+\begin{center}
+\textbf{Abstract}
+\end{center}
+\vspace{-8pt}
+
+\textbf{Background:} Metabolic dysfunction--associated steatotic liver disease (MASLD) has been linked to increased cardiovascular risk, but its specific association with stroke — and the potential pathways underlying this association — remains incompletely characterized. We conducted a systematic review and meta-analysis to quantify the MASLD--stroke association and explore two candidate pathways: atrial fibrillation (AF) and hepatic fibrosis.
+
+\textbf{Methods:} We searched [databases] for studies reporting stroke risk in MASLD versus non-MASLD populations. Random-effects meta-analysis was performed (REML estimator). Heterogeneity was explored via meta-regression (AF adjustment as moderator), subgroup analyses, and fibrosis-stratified estimates. Evidence for an AF-associated pathway was evaluated across five hierarchical levels (Table S1). Fibrosis-related risk was assessed through severity-stratified estimates and longitudinal fibrosis dynamics.
+
+\textbf{Results:} Across 21 studies including approximately 29.8 million participants, MASLD was associated with a 37\% increased risk of stroke (HR 1.37, 95\% CI 1.28--1.46), with substantial heterogeneity (I\textsuperscript{2}=98.6\%). Meta-regression identified AF adjustment as a significant moderator of between-study heterogeneity (R\textsuperscript{2}=16.4\%, p=0.040), with predicted stroke risk attenuating from HR 1.40 (95\% CI 1.31--1.49) to HR 1.13 (95\% CI 0.93--1.37) after AF adjustment. Patient-level interaction analysis (Jang 2026) confirmed effect modification by baseline AF (without AF: HR 1.10; with AF: HR 1.03, 0.95--1.12). Among four studies reporting fibrosis-stratified estimates, a consistent severity gradient was observed, with the strongest signal from NFS-based stratification (Chen 2023: advanced fibrosis HR 2.08). Fibrosis regression was associated with reduced stroke risk (Park 2022: HR 0.58) compared to persistent fibrosis (HR 1.31).
+
+\textbf{Conclusions:} MASLD is associated with increased stroke risk. AF-associated mechanisms partially account for between-study heterogeneity, consistent with effect modification rather than confirmed mediation. Fibrosis severity and dynamics provide additional prognostic information. These findings highlight the importance of AF surveillance and fibrosis assessment in MASLD patients for stroke risk stratification.
+
+\newpage
+
+% ============================================================
+%  INTRODUCTION
+% ============================================================
+\section{Introduction}
+
+Metabolic dysfunction--associated steatotic liver disease (MASLD), formerly known as non-alcoholic fatty liver disease (NAFLD), affects approximately 25--30\% of the global adult population and represents the hepatic manifestation of the metabolic syndrome \cite{}. While MASLD is strongly associated with cardiovascular morbidity and mortality, its specific relationship with cerebrovascular events — particularly stroke — has received less systematic attention.
+
+Several mechanisms have been proposed to link MASLD with stroke risk. Atrial fibrillation (AF), which is more prevalent in MASLD patients, may represent one such pathway: MASLD-associated systemic inflammation, autonomic dysfunction, and atrial structural remodeling may promote AF, which in turn increases thromboembolic stroke risk. Hepatic fibrosis severity may independently contribute to a prothrombotic state through altered coagulation factor synthesis and endothelial dysfunction.
+
+However, existing primary studies vary substantially in their adjustment for AF and assessment of fibrosis, contributing to marked between-study heterogeneity. We conducted this systematic review and meta-analysis to: (1) quantify the overall association between MASLD and stroke risk; (2) evaluate the evidence for an AF-associated pathway linking MASLD and stroke; and (3) characterize the relationship between hepatic fibrosis severity/dynamics and stroke risk.
+
+% ============================================================
+%  METHODS
+% ============================================================
+\section{Methods}
+
+\subsection{Search Strategy and Selection Criteria}
+
+[Search strategy to be detailed.]
+
+\subsection{Data Extraction and Quality Assessment}
+
+[Data extraction procedures to be detailed.]
+
+\subsection{Statistical Analysis}
+
+The primary analysis used random-effects meta-analysis with restricted maximum-likelihood (REML) estimation to pool study-level hazard ratios. Heterogeneity was quantified using I\textsuperscript{2} and Cochran's Q. Meta-regression was performed to evaluate whether AF adjustment moderated the MASLD--stroke association. Subgroup analyses were conducted by fibrosis assessment status, AF adjustment, liver disease definition, and other study-level characteristics.
+
+\textit{NHIS overlap handling.} Several studies were derived from the Korean National Health Insurance Service database and contained partially overlapping source populations. To avoid potential double-counting, only the largest and most comprehensive cohort (Jang et al., 2026) was retained in the primary quantitative synthesis. Park et al. (2022) was included descriptively to evaluate fibrosis dynamics but was not entered into pooled analyses.
+
+All analyses were conducted in R (version 4.5.2) using the \texttt{meta} and \texttt{metafor} packages. Statistical significance was set at $\alpha = 0.05$ (two-sided).
+
+% ============================================================
+%  RESULTS
+% ============================================================
+\section{Results}
+
+\subsection{Study Characteristics and Main Analysis}
+
+The systematic search yielded [N] records, of which 21 studies met inclusion criteria, encompassing approximately 29.8 million participants. Study characteristics are summarized in Table 1.
+
+Across 21 studies, MASLD was associated with a 37\% increased risk of stroke (HR 1.37, 95\% CI 1.28--1.46, I\textsuperscript{2}=98.6\%; Figure 2). Sensitivity analyses excluding potentially overlapping NHIS cohorts yielded directionally consistent results (HR 1.34 vs 1.33).
+
+\subsection{AF-Associated Pathway}
+
+Meta-regression identified AF adjustment as a significant moderator of between-study heterogeneity (R\textsuperscript{2}=16.4\%, p=0.040; $\beta = -0.214$; Figure 6A). The predicted stroke risk attenuated from HR 1.40 (95\% CI 1.31--1.49) in studies without AF adjustment to HR 1.13 (95\% CI 0.93--1.37) in studies with AF adjustment — corresponding to 67.7\% attenuation of the excess risk.
+
+Patient-level interaction analysis from Jang et al. (2026) demonstrated effect modification by baseline AF: among patients without baseline AF, MASLD was associated with HR 1.10 for stroke, whereas among patients with baseline AF, the association was substantially attenuated (HR 1.03, 95\% CI 0.95--1.12; Figure 6B). Within-study AF covariate adjustment yielded consistent directional attenuation (HR 1.14 $\rightarrow$ 1.10; 28.6\% attenuation). Lee et al. (2021) reported attenuation after bundle adjustment for cardiovascular comorbidities including AF (HR 1.55 $\rightarrow$ 1.43; 21.8\%), though the AF-specific contribution could not be isolated.
+
+Supporting pathway evidence from Ohno et al. (2023) demonstrated that MASLD was associated with a 51\% increased risk of incident AF (HR 1.51, 95\% CI 1.46--1.57; n=8.2 million), establishing the MASLD--AF link in the proposed pathway.
+
+A five-level evidence hierarchy is presented in Supplementary Table S1. Subgroup analyses yielded directionally consistent findings, although the number of studies was limited.
+
+\subsection{Fibrosis-Related Pathway}
+
+Four studies reported fibrosis-stratified stroke risk estimates using different assessment tools (histology, NFS, AAR, BARD). Individual study estimates are shown in Figure 7A. Although a formal pooled analysis was not performed due to heterogeneity in fibrosis measurement methods, a consistent direction toward higher risk with more advanced fibrosis was observed across all tools: histology (Simon 2022: low HR 1.50, intermediate HR 1.96, advanced HR 1.91), NFS (Chen 2023: low HR 1.29, intermediate HR 1.38, advanced HR 2.08), AAR (Chung 2022: reference HR 1.00, intermediate HR 1.13, high HR 1.29), and BARD (Jang 2026: low/reference HR 1.03, advanced HR 1.11).
+
+Longitudinal fibrosis dynamics from Park et al. (2022) provided complementary evidence: fibrosis regression was associated with substantially reduced stroke risk (HR 0.58) compared to persistent fibrosis (HR 1.31; Figure 7B).
+
+Although subgroup differences did not reach conventional statistical significance (p=0.078), a consistent increase in risk estimates was observed across studies reporting more advanced fibrosis (Supplementary Figure S9).
+
+% ============================================================
+%  DISCUSSION
+% ============================================================
+\section{Discussion}
+
+This systematic review and meta-analysis of 21 studies including approximately 29.8 million participants demonstrates that MASLD is associated with a 37\% increased risk of stroke. Beyond confirming this association, our analysis identifies two factors that contribute to risk heterogeneity: an AF-associated pathway and fibrosis severity/dynamics.
+
+Meta-regression identified AF adjustment as a significant moderator (R\textsuperscript{2}=16.4\%, p=0.040), with predicted stroke risk attenuating from HR 1.40 to 1.13 after AF adjustment. This between-study finding is corroborated by patient-level interaction data (Jang 2026: HR 1.10 without baseline AF vs 1.03 with AF) and supported by large-scale evidence linking MASLD to incident AF (Ohno 2023: HR 1.51, n=8.2M). Taken together, these findings are consistent with an AF-associated pathway — though it is important to emphasize that the present evidence derives from observational data and meta-regression, not from formal mediation analysis. We therefore describe this as an ``AF-associated pathway'' rather than confirming AF mediation.
+
+Regarding fibrosis, the severity gradient observed across multiple assessment tools — from HR 1.21 (non-advanced) to HR 1.58 (advanced) in exploratory pooled analysis — and the dynamic nature of fibrosis-related risk (regression HR 0.58 vs persistent HR 1.31) suggest that hepatic fibrosis provides prognostic information beyond AF. However, the heterogeneity in fibrosis measurement methods (histology, NFS, AAR, BARD) precludes formal meta-analytic pooling, and these findings should be interpreted as exploratory.
+
+Several limitations warrant consideration. First, the between-study meta-regression (Level I evidence) is ecological by design and cannot establish individual-level mediation. Second, only two studies in our sample adjusted for AF, limiting the statistical power of subgroup comparisons. Third, fibrosis-stratified estimates derive from single studies using non-standardized tools. Fourth, residual confounding by metabolic comorbidities shared between MASLD and stroke cannot be excluded.
+
+In conclusion, MASLD is associated with increased stroke risk, with AF-associated mechanisms and fibrosis severity/dynamics representing potential contributors to risk heterogeneity. These findings support AF surveillance and fibrosis assessment as components of stroke risk stratification in MASLD patients.
+
+% ============================================================
+%  REFERENCES
+% ============================================================
+\newpage
+\begin{thebibliography}{99}
+
+% References will be added via BibTeX or manually
+
+\end{thebibliography}
+
+% ============================================================
+%  FIGURE LEGENDS
+% ============================================================
+\newpage
+\section*{Figure Legends}
+
+\textbf{Figure 2.} Forest plot of the association between MASLD and stroke risk (main analysis). Random-effects meta-analysis (REML estimator), k=21, n$\approx$29.8M. Squares represent study-specific hazard ratios; size is proportional to study weight. Diamond represents the pooled estimate (HR 1.37, 95\% CI 1.28--1.46). I\textsuperscript{2}=98.6\%.
+
+\textbf{Figure 6.} Evidence for an AF-associated pathway linking MASLD and stroke risk. \textbf{(A)} Meta-regression evidence: predicted hazard ratios from random-effects meta-regression with AF adjustment as moderator (R\textsuperscript{2}=16.4\%, p=0.040). Diamond vertices indicate predicted HRs and 95\% CIs. \textbf{(B)} Patient-level AF subgroup interaction (Jang 2026): dual forest plot without causal arrows. Effect modification annotation replaces directional arrow notation. \textbf{(C)} Left: mechanism cascade (MASLD $\rightarrow$ incident AF $\rightarrow$ stroke risk). Right: evidence chain boxes (meta-regression, AF subgroup interaction, MASLD$\rightarrow$AF pathway link).
+
+\textbf{Figure 7.} Fibrosis severity and dynamics. \textbf{(A)} Fibrosis severity gradient across assessment tools (histology, NFS, AAR, BARD). Shape coding: circle = low/reference, square = intermediate, triangle = advanced/high. Color coding by assessment tool. \textbf{(B)} Fibrosis dynamics (Park 2022): fibrosis regression (HR 0.58, protective) vs persistent fibrosis (HR 1.31).
+
+\textbf{Supplementary Table S1.} Evidence hierarchy for the AF-associated pathway between MASLD and stroke risk. Five evidence levels: I (between-study meta-regression), II (patient-level interaction), III (within-study AF adjustment), IV (bundle adjustment), S1 (supporting pathway evidence). Attenuation calculated as (HR\textsubscript{without AF} $-$ HR\textsubscript{with AF}) / (HR\textsubscript{without AF} $-$ 1) $\times$ 100\%.
+
+\textbf{Supplementary Figure S9.} Subgroup analysis by fibrosis assessment status (assessed vs not assessed). Random-effects model. p-between = 0.078.
+
+\end{document}

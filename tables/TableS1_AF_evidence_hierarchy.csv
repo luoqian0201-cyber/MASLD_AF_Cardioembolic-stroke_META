@@ -1,0 +1,6 @@
+"Level","Study","Evidence_Type","HR_Without_AF","HR_With_AF","Pct_Attenuation","Attenuation_Level","Note"
+"I","Meta-regression (k=21)","Between-study AF moderation","1.40 [1.31–1.49]","1.13 [0.93–1.37]","67.7%","Substantial","R²=16.4%, p=0.040, β=-0.214"
+"II","Jang et al. (2026)","Patient-level AF subgroup interaction","1.10","1.03 [0.95–1.12]","70.0%","Substantial","Absolute AF independence; Level C evidence; MASLD excess risk nearly eliminated in AF subgroup"
+"III","Jang et al. (2026)","Within-study AF adjustment","1.14","1.10","28.6%","Moderate","Model-based AF covariate adjustment; consistent with patient-level interaction"
+"IV","Lee et al. (2021)","Bundle adjustment (CV comorbidities incl. AF)","1.55","1.43","21.8%","Moderate","Level B evidence; bundle includes AF + cardiovascular comorbidities; AF-specific contribution not isolatable"
+"S1","Ohno et al. (2023)","MASLD → incident AF (pathway link)","—","1.51 [1.46–1.57]","—","Supporting","Establishes MASLD→AF association; does not directly test AF→stroke attenuation; large general-population cohort (n=8.2M)"

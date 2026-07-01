@@ -1,0 +1,72 @@
+# ============================================================
+#  .gitignore — MASLD-Stroke Meta-Analysis Project
+# ============================================================
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ---- R ----
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+.Renviron
+.Rprofile
+*.Rproj
+rsconnect/
+
+# ---- LaTeX Build ----
+manuscript/build/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*.bcf
+*-blx.bib
+
+# ---- Large Figures ----
+# Track source scripts, exclude rendered TIFFs (these are reproducible)
+# Comment out if you prefer to track figures in git
+figures/*.tiff
+figures/*.tif
+figures/*.png
+figures/*.pdf
+
+# ---- Excel Data (binary, large) ----
+# These are the source data — consider tracking with Git LFS
+# or excluding if they contain sensitive patient data
+# Uncomment the line below if data should not be in git:
+# *.xlsx
+# *.xls
+~$*.xlsx
+~$*.xls
+
+# ---- Manuscript PDF ----
+# Track the source, not the compiled PDF
+manuscript/*.pdf
+!manuscript/figures/*.pdf
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- VSCode ----
+.vscode/
