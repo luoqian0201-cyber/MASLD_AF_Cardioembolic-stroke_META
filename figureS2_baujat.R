@@ -15,7 +15,7 @@ library(readxl)
 # ============================================================
 # Data prep (standard pipeline — locked k=21)
 # ============================================================
-data <- read_excel("raw_data/MASLD_AF_Cardioembolic stroke_META.25.xlsx",
+data <- read_excel("raw_data/MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx",
                    sheet = "Main Meta Data")
 data$HR <- as.numeric(data$HR)
 data$stroke_group <- ifelse(

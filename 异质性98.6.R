@@ -1,6 +1,6 @@
 # ============================================================
 # MASLD & Stroke Meta-Analysis — FINAL (LOCKED)
-# 2026-06-20 | Data: MASLD_AF_Cardioembolic stroke_META.25.xlsx
+# 2026-06-20 | Data: MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx
 # 主分析 k=21, n≈29.8M, HR=1.37 (1.28-1.46), I²=98.6%
 # PRISMA: 2192 identified → 1615 screened → 590 FT → 24 qualitative → 21 MA
 # 敏感性 k=18-20 | Meta-regression | GRADE
@@ -21,7 +21,7 @@ library(readxl)
 # 1. 导入 + 结局标准化
 # ============================================================
 data <- read_excel(
-  "MASLD_AF_Cardioembolic stroke_META.25.xlsx",
+  "MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx",
   sheet = "Main Meta Data"
 )
 data$HR <- as.numeric(data$HR)
@@ -52,7 +52,7 @@ data_main$seTE <- (log(data_main$upperCI) - log(data_main$lowerCI)) / 3.92
 
 # --- 合并协变量 (提前到此处, 供所有亚组分析使用) ---
 dc <- read_excel(
-  "MASLD_AF_Cardioembolic stroke_META.25.xlsx",
+  "MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx",
   sheet = "Study_Characteristics"
 )
 dc <- dc[-1, ]  # 移除首行模板

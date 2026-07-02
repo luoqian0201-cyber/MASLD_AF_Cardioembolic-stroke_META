@@ -3,7 +3,7 @@ library(metafor)
 library(readxl)
 
 # === Load & prep ===
-data <- read_excel("MASLD_AF_Cardioembolic stroke_META.25.xlsx", sheet = "Main Meta Data")
+data <- read_excel("MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx", sheet = "Main Meta Data")
 data$HR <- as.numeric(data$HR)
 data$stroke_group <- ifelse(data$outcome %in% c("All Stroke","Stroke","Cerebrovascular disease (CVD)"), "Total Stroke", "Ischemic Stroke")
 data_main <- data
@@ -14,7 +14,7 @@ data_main$study_label <- make.unique(paste0(data_main$study, " (", data_main$yea
 data_main$TE  <- log(data_main$HR)
 data_main$seTE <- (log(data_main$upperCI) - log(data_main$lowerCI)) / 3.92
 
-dc <- read_excel("MASLD_AF_Cardioembolic stroke_META.25.xlsx", sheet = "Study_Characteristics")
+dc <- read_excel("MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx", sheet = "Study_Characteristics")
 dc <- dc[-1,]
 dc$study_clean <- gsub("^[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]+", "", dc$study)
 dc$study_clean <- trimws(dc$study_clean)

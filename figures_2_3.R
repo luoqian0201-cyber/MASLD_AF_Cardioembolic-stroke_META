@@ -9,7 +9,7 @@ library(readxl)
 # ============================================================
 # Data prep (standard pipeline)
 # ============================================================
-data <- read_excel("MASLD_AF_Cardioembolic stroke_META.25.xlsx", sheet = "Main Meta Data")
+data <- read_excel("MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx", sheet = "Main Meta Data")
 data$HR <- as.numeric(data$HR)
 data$stroke_group <- ifelse(
   data$outcome %in% c("All Stroke", "Stroke", "Cerebrovascular disease (CVD)"),

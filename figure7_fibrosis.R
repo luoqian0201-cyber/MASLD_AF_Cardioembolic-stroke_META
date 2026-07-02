@@ -15,7 +15,7 @@ library(readxl)
 # Data verification only — all Figure 7 HRs are paper-extracted
 # severity-stratified values, NOT from the main meta-analysis pool
 # ============================================================
-data <- read_excel("MASLD_AF_Cardioembolic stroke_META.25.xlsx", sheet = "Main Meta Data")
+data <- read_excel("MASLD_AF_Cardioembolic stroke_META.最新版xlsx_.xlsx", sheet = "Main Meta Data")
 data$HR <- as.numeric(data$HR)
 
 # ============================================================
